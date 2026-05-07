@@ -12,10 +12,10 @@ Este checklist te guiará paso a paso a través del laboratorio. Completa cada t
 
 Comienza familiarizándote con el entorno:
 
-- [ ] Verifico que el servidor esté corriendo en `http://localhost:3000`
-- [ ] Visualizo la interfaz de login correctamente
-- [ ] He leído el `README.md` para entender el proyecto
-- [ ] Comprendo que hay vulnerabilidades intencionales para mi aprendizaje
+- [x] Verifico que el servidor esté corriendo en `http://localhost:3000`
+- [x] Visualizo la interfaz de login correctamente
+- [x] He leído el `README.md` para entender el proyecto
+- [x] Comprendo que hay vulnerabilidades intencionales para mi aprendizaje
 
 ## FASE 2: Reconocimiento de Vulnerabilidades
 
@@ -23,26 +23,26 @@ Ahora comienza a investigar. Busca activamente estas vulnerabilidades:
 
 ### Frontend (JavaScript/HTML/CSS)
 
-- [ ] Identifico que hay `innerHTML` usado sin sanitizar
-- [ ] Encuentro que los parámetros se pasan en la URL sin encripción
-- [ ] Noto que la contraseña se envía en texto plano
-- [ ] Veo exposición de endpoints administrativos
-- [ ] Descubro que puedo acceder a las contraseñas de todos los usuarios
+- [x] Identifico que hay `innerHTML` usado sin sanitizar
+- [x] Encuentro que los parámetros se pasan en la URL sin encripción
+- [x] Noto que la contraseña se envía en texto plano
+- [x] Veo exposición de endpoints administrativos
+- [x] Descubro que puedo acceder a las contraseñas de todos los usuarios
 
 ### Backend (Node.js/Express)
 
-- [ ] Encuentro que usa `==` en lugar de `===` en las comparaciones
-- [ ] Veo que `/users` expone todas las contraseñas sin autenticación
-- [ ] Noto que `/save` usa `appendFileSync` sin validación (¡corrompe JSON!)
-- [ ] Identifico que el manejo de errores expone stack traces completos
-- [ ] Descubro que `/admin/stats` no requiere autenticación
-- [ ] Veo que se registran contraseñas en texto plano en los logs
+- [x] Encuentro que usa `==` en lugar de `===` en las comparaciones
+- [x] Veo que `/users` expone todas las contraseñas sin autenticación
+- [x] Noto que `/save` usa `appendFileSync` sin validación (¡corrompe JSON!)
+- [x] Identifico que el manejo de errores expone stack traces completos
+- [x] Descubro que `/admin/stats` no requiere autenticación
+- [x] Veo que se registran contraseñas en texto plano en los logs
 
 ### Base de Datos
 
-- [ ] Observo que las contraseñas están en texto plano en `users.json`
-- [ ] Identifico que la estructura de datos es vulnerable
-- [ ] Constato que no hay encriptación o hashing de contraseñas
+- [x] Observo que las contraseñas están en texto plano en `users.json`
+- [x] Identifico que la estructura de datos es vulnerable
+- [x] Constato que no hay encriptación o hashing de contraseñas
 
 ## FASE 3: Pruebas y Evidencia
 
@@ -50,36 +50,36 @@ Ahora realiza pruebas controladas para confirmar cada vulnerabilidad:
 
 ### Test 1: SQL Injection Simulada
 ```
-- [ ] Intento login con usuario 'admin' y contraseña correcta
-- [ ] Pruebo login con caracteres especiales o bypass
-- [ ] Documento el comportamiento exacto que observo
+- [x] Intento login con usuario 'admin' y contraseña correcta
+- [x] Pruebo login con caracteres especiales o bypass
+- [x] Documento el comportamiento exacto que observo
 ```
 
 ### Test 2: Información Disclosure
 ```
-- [ ] Accedo a /users sin proporcionar autenticación
-- [ ] Verifico si puedo ver todas las contraseñas expuestas
-- [ ] Tomo una captura de pantalla como evidencia
+- [x] Accedo a /users sin proporcionar autenticación
+- [x] Verifico si puedo ver todas las contraseñas expuestas
+- [x] Tomo una captura de pantalla como evidencia
 ```
 
 ### Test 3: XSS (Cross-Site Scripting)
 ```
-- [ ] Intento inyectar código JavaScript: <script>alert('XSS')</script>
-- [ ] Pruebo con HTML malicioso en el campo de usuario
-- [ ] Documento si el código se ejecuta en mi navegador
+- [x] Intento inyectar código JavaScript: <script>alert('XSS')</script>
+- [x] Pruebo con HTML malicioso en el campo de usuario
+- [x] Documento si el código se ejecuta en mi navegador
 ```
 
 ### Test 4: Acceso Admin (Sin Autenticación)
 ```
-- [ ] Accedo a /admin/stats sin proporcionar credenciales
-- [ ] Observo qué información del servidor está expuesta
+- [x] Accedo a /admin/stats sin proporcionar credenciales
+- [x] Observo qué información del servidor está expuesta
 ```
 
 ### Test 5: Escritura de Archivos Insegura
 ```
-- [ ] Intento guardar un nuevo usuario
-- [ ] Verifico si el archivo users.json se corrompe
-- [ ] Pruebo inyectar datos maliciosos
+- [x] Intento guardar un nuevo usuario
+- [x] Verifico si el archivo users.json se corrompe
+- [x] Pruebo inyectar datos maliciosos
 ```
 
 ## FASE 4: Análisis Profesional y Documentación
