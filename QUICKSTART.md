@@ -111,4 +111,4 @@ Así verás exactamente qué está pasando mientras los estudiantes interactúan
 
 ---
 
-¡A trabajar en la auditoría de seguridad! 🔐
+¡A trabajar en la auditoría de seguridad!
