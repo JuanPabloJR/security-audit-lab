@@ -298,4 +298,4 @@ Si tienes preguntas:
 **Versión:** 1.0.0  
 **Estado:** Listo para usar en clase
 
-¡Éxito con tu laboratorio de auditoría de seguridad! 🚀
+¡Éxito con tu laboratorio de auditoría de seguridad! 
